@@ -1,0 +1,22 @@
+<div>
+    <button (click)='ngValue("input")' >@ Input</button>
+    <button (click)='ngValue("output")'>@ Output</button>
+
+    <div  *ngIf='ngIfValue == true'>
+        <p>Parent component</p>
+        <button (click)='setValue("blue")' style="background: blue;">Blue</button>
+        <button (click)='setValue("red")' style="background: red;">Red</button>
+        <button (click)='setValue("green")' style="background: green;">Green</button>
+
+        <app-input [inputValue]='childValue'></app-input>
+        
+    </div>
+
+    <div *ngIf='ngIfValue == false'>
+        <p>{{parentContent}}</p>
+        <app-output (changeContentClick)='change($event)'></app-output>
+    </div>
+
+</div>
+<br>
+<app-back-button></app-back-button>
