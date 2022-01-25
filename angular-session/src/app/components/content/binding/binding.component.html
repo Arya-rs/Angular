@@ -1,0 +1,16 @@
+
+<div>
+    <span style="font-size:20px ;">property binding & event binding</span><br>
+    
+    <span>Default input value : </span> 
+    <input type="text" [value]="defaultInputValue"> <br>
+
+    <button (click)='changeValue()' [style.background]='changedColor'>{{buttonName}}</button>
+    <br><br>
+    
+    <span>Two way binding - property binding + event binding</span><br>
+    <input type="text" [(ngModel)]='userName' placeholder="2-way binding">{{userName}}
+
+</div>
+<br>
+<app-back-button></app-back-button>

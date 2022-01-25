@@ -1,0 +1,12 @@
+<div>
+    <p>*ngIf</p>
+    <button (click)='toggleValue("true")'>True</button>
+    <button (click)='toggleValue("false")'>False</button>
+    <br><br>
+    <span *ngIf='ngifValue == true'>ngIf value True</span>
+    <span *ngIf='ngifValue == false'>ngIf value False</span>
+
+</div>
+<br>
+<button (click)='back()' style="display: flex; margin: auto;">Back</button>
+
